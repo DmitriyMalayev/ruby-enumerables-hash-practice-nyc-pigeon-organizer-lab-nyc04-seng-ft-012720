@@ -1,20 +1,21 @@
 require "pry"
 
-def nyc_pigeon_organizer(hash)
-new_hash = {}
-hash.each do |data_type, data|
-  data.each do |keys, names|
-    names.each do |name|
-
-
-   new_hash[name] ||= {}
-   new_hash[name][data_type] ||= []
-   new_hash[name][data_type] << names
-
-binding.pry
-end
-end
-end
+def nyc_pigeon_organizer(data)
+  pigeon_list = {}
+  data.each do |color_gender_lives, value|
+    value.each do |stats, all_names|
+      all_names.each do |name|
+        if pigeon_list[name] == nil
+          pigeon_list[name] = {}
+        end
+        if pigeon_list[name][color_gender_lives] == nil
+          pigeon_list[name][color_gender_lives] = []
+        end
+        pigeon_list[name][color_gender_lives].push(stats.to_s)
+      end
+    end
+  end
+  pigeon_list
 end
 
 # pigeon_list = {
@@ -28,3 +29,4 @@ end
 #     :gender => ["male"],
 #     :lives => ["Library"]
 #   },
+ex
