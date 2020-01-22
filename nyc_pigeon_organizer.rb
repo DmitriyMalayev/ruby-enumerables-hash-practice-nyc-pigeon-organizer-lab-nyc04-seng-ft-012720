@@ -7,7 +7,7 @@ hash.each do |data_type, data|
     names.each do |name|
 
 
-   new_hash[name] || = {}
+   new_hash[name] ||= {}
    new_hash[name][data_type] ||= []
    new_hash[name][data_type] << names
 
