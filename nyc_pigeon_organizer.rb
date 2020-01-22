@@ -5,9 +5,12 @@ new_hash = {}
 hash.each do |data_type, data|
   data.each do |keys, names|
     names.each do |name|
-if !new_hash[name]
-  new_hash[name] = {}
 
+
+   new_hash[name] || = {} 
+   new_hash[name][data_type] || = [] 
+   new_hash[name][data_type] << names
+   
 
 end
 
