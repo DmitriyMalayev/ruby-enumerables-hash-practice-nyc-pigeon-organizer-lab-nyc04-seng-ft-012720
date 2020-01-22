@@ -15,7 +15,6 @@ end
   #Will give it truthie or nil
 
 
-binding.pry
 end
 end
 end
