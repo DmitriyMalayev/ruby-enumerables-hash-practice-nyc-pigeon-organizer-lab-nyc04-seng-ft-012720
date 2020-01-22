@@ -1,5 +1,3 @@
-require "pry"
-
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
   data.each do |color_gender_lives, value|
@@ -15,18 +13,5 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  pigeon_list
+  return pigeon_list
 end
-
-# pigeon_list = {
-#   "Theo" => {
-#     :color => ["purple", "grey"],
-#     :gender => ["male"],
-#     :lives => ["Subway"]
-#   },
-#   "Peter Jr." => {
-#     :color => ["purple", "grey"],
-#     :gender => ["male"],
-#     :lives => ["Library"]
-#   },
-ex
